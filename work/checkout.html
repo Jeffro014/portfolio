@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout Reliability — Jeff Rolling</title>
+<meta name="description" content="A four-month stabilization program targeting payment authorization failures at checkout: from an estimated 30% of bookings failing to a measured 9.4%.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Jeff Rolling<small>Product Manager · Amsterdam</small></a>
+    <nav class="nav" aria-label="Main">
+      <a href="../index.html#work" aria-current="page">Work</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="cs-head">
+    <div class="wrap">
+      <p class="eyebrow">Case study 2 of 3 · Payments &amp; platform reliability · GetGoing</p>
+      <h1>Making checkout reliable when a third of bookings were failing</h1>
+      <p class="lede">Shortly after launch, payment authorization failures at checkout were turning confirmed itineraries into support tickets. Leadership still wanted new features for prospects. I had to make the case that reliability <em>was</em> the feature — and then run the program.</p>
+      <dl class="glance">
+        <div><dt>Problem</dt><dd>The team estimated roughly 30% of bookings were failing, most at payment authorization. Sales couldn't demo with confidence.</dd></div>
+        <div><dt>My role</dt><dd>Sole PM. Owned the booking flow end to end — shopping, selection, checkout, payment, confirmation — and the prioritization case to leadership.</dd></div>
+        <div><dt>Result</dt><dd class="big">~30% → 9.4%</dd></div>
+        <div><dt>Source</dt><dd>Failure rate: GetGoing database, 2026 YTD (250 of ~2,650 bookings). Starting point: team estimate, not a measurement.</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <div class="cs-body">
+    <section>
+      <div class="wrap">
+        <h2>The situation</h2>
+        <p>GetGoing processes corporate travel payments across Europe and North America: different rails, different card products, different failure modes. In year one, recurring platform issues were hitting customers at the worst possible moment — <strong>checkout</strong>. A traveler would pick a flight, submit a card, and the booking would fail to authorize. Tickets piled up, Sales struggled to get new customers to trust the platform, and the team's own estimate was that <strong>roughly 30% of bookings were failing.</strong></p>
+        <p>The estimate wasn't precise — we didn't yet have clean failure instrumentation — but it was enough to make the case. For a booking platform, it was an existential number.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>The trade-off nobody wanted to make</h2>
+        <p>Leadership was still pushing feature work to win sales opportunities. The default framing was “bugs versus features,” and under that framing bugs always lose: features have a named prospect attached and bug fixes don't.</p>
+        <div class="callout">
+          <p class="eyebrow">The reframe</p>
+          <p>Stability improves the experience for <strong>every</strong> customer. Most requested features served one or two prospects with no guaranteed business. That's the actual trade-off — not bugs vs. features, but everyone vs. someone.</p>
+        </div>
+        <p>To make that concrete, I partnered with Engineering to gather every known issue, assess customer impact, and <strong>size the work with RICE</strong>. Instead of triaging bugs individually, we grouped related failures so root causes could be fixed once. Then I worked my manager, the VP of Engineering, and the commercial stakeholders through the prioritization — with the impact numbers, not with opinions.</p>
+        <p>We landed on a split: most capacity to stabilization for a fixed window, a small number of strategic features continuing so Sales still had news to share. I went deeper into sprint planning, backlog grooming, and stand-ups than a PM normally would, because holding that alignment for four months was the whole job.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>What shipped</h2>
+        <ul>
+          <li><strong>A four-month stabilization program</strong> targeting the authorization failures at checkout, sequenced by customer impact.</li>
+          <li><strong>A daily bug check-in</strong> with the GetGoing engineering lead and the vendor's project lead during the critical-bug spike, which became the standing triage practice.</li>
+          <li><strong>A durable capacity policy.</strong> The program ended, but the argument didn't: leadership adopted a planned split between platform health and feature work. Releases got faster once the platform stopped fighting back.</li>
+          <li><strong>The checkout itself.</strong> Alongside the reliability work, I launched the payment options travelers actually use: bring-your-own-card for Visa, Mastercard, Amex, AirPlus and Amex BTA; virtual payment automation via Conferma; and Worldline integrations. One deliberate decision: the surcharge is <em>always</em> shown, whatever the payment method, and the method order never changes by traveler or market. Transparent beats optimized.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>The result</h2>
+        <div class="before-after">
+          <div class="cell"><div class="k">Bookings failing</div><div class="v">~30%</div><div class="m">Team estimate at program start</div></div>
+          <div class="arrow">→</div>
+          <div class="cell after"><div class="k">Bookings failing</div><div class="v">9.4%</div><div class="m">Measured · 2026 YTD · 250 of ~2,650</div></div>
+        </div>
+        <p>Support tickets dropped, Sales had a product it could demo, and customer confidence — and sales — rose. In 2024 the team resolved <strong>380+ bugs, averaging 32 a month</strong>, while critical and major bug frequency fell.</p>
+        <p>The outcome I care about most is organizational: <strong>leadership began trusting the product team to make roadmap decisions</strong> instead of reacting to the loudest request. That trust is what made every later program on this site possible.</p>
+        <div class="note">
+          <p><strong>On the numbers.</strong> The 30% is what we believed when we started; the 9.4% is what the database says now. I present them as estimate-then vs. measured-now on purpose. Compressing them into “a 69% improvement” would imply a precision the starting point never had.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>What I'd do differently</h2>
+        <p>Instrument failures before arguing about them. We won the prioritization case on an estimate, and it took until 2026 to have a failure rate I fully trust. If I ran this again, the first two weeks would go to classifying every failed authorization by cause — issuer decline, 3DS, integration error, data — so the program could be sequenced by measured share rather than by engineering intuition, and so the “after” would have been available in month five instead of year three.</p>
+      </div>
+    </section>
+
+    <div class="wrap cs-nav">
+      <a href="onboarding.html">← Previous: Time to first booking</a>
+      <a href="expense.html">Next: Expense from zero →</a>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <div>Jeff Rolling · Product Manager</div>
+      <div class="muted">Amsterdam · Open to Senior PM roles in travel, payments, and expense</div>
+    </div>
+    <div>
+      <a href="mailto:jeff.rolling@gmail.com">jeff.rolling@gmail.com</a> ·
+      <a href="https://www.linkedin.com/in/JeffRolling" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

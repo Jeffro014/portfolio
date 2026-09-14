@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Time to First Booking — Jeff Rolling</title>
+<meta name="description" content="How I cut GetGoing's time to first booking from 49 days to under 30 by redesigning onboarding and activation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Jeff Rolling<small>Product Manager · Amsterdam</small></a>
+    <nav class="nav" aria-label="Main">
+      <a href="../index.html#work" aria-current="page">Work</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="cs-head">
+    <div class="wrap">
+      <p class="eyebrow">Case study 1 of 3 · Activation · GetGoing, 2024–2025</p>
+      <h1>Cutting time-to-first-booking from 49 days to under 30</h1>
+      <p class="lede">GetGoing's pitch to small businesses is fast implementation. In early 2024, the average new customer took 49 days to make a first booking — and the single worst step took two months on its own.</p>
+      <dl class="glance">
+        <div><dt>Problem</dt><dd>New customers were signed, but not booking. Revenue and the “fast to implement” promise were both slipping.</dd></div>
+        <div><dt>My role</dt><dd>Sole PM. Owned the journey mapping, the redesign, the prioritization, and the Customer Success enablement.</dd></div>
+        <div><dt>Result</dt><dd class="big">49 → &lt;30 days</dd></div>
+        <div><dt>Source</dt><dd>2024 and 2025 performance reviews; T&amp;C validation tracked quarterly.</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <div class="cs-body">
+    <section>
+      <div class="wrap">
+        <h2>The situation</h2>
+        <p>GetGoing is a self-serve travel and expense platform for SMBs. Customers are supposed to sign, set up, and book within days without a travel agent in the loop. In practice the 2024 average from contract to first booking was <strong>49 days</strong>, and Customer Success was spending a large share of its time walking customers through setup by hand.</p>
+        <p>That mattered twice over. Time to first booking is time to first revenue. And “implementation in days, not months” was one of the few genuine advantages we had against larger travel management companies — every week of delay made that claim weaker.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Finding the real bottleneck</h2>
+        <p>Rather than start from the UI, I partnered with Sales and Customer Success to <strong>map the complete onboarding journey</strong> from signed contract to first trip: every step, every hand-off, every email, and how long each actually took.</p>
+        <p>The map surfaced the usual friction — confusing account setup steps, unclear communications, usability issues in the admin flows. It also surfaced one step nobody had isolated before: <strong>assigning the authorized signer for Terms &amp; Conditions.</strong> Customers routinely got stuck deciding who at their company could sign, and the platform gave them no help. In Q1 2024, T&amp;C validation alone averaged <strong>64.5 days</strong>.</p>
+        <div class="callout">
+          <p class="eyebrow">The decision</p>
+          <p>Treat onboarding as a product problem, not a Customer Success problem. Instead of fixing bugs one at a time, redesign the experience around <em>reducing customer effort</em> — and prioritize every fix by the number of days it would give back.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>What shipped</h2>
+        <ul>
+          <li><strong>Simplified account setup and T&amp;C flow.</strong> Clarified who signs and made the step visible and trackable, instead of a back-and-forth over email.</li>
+          <li><strong>Clearer UI and messaging.</strong> Rewrote onboarding emails and in-product copy so a customer could self-serve the next step without a CS call.</li>
+          <li><strong>Impact-ranked fixes.</strong> Bundled the usability issues by how many days each was costing and sequenced them that way, rather than by how loudly they were reported.</li>
+          <li><strong>Customer Success enablement.</strong> Built documentation, ran hands-on workshops, and sat in on live onboarding sessions to watch customers use the platform. Those sessions fed a second round of fixes and a customer-facing knowledge base — the best research came from watching, not asking.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>The result</h2>
+        <div class="before-after">
+          <div class="cell"><div class="k">Time to first booking</div><div class="v">49 days</div><div class="m">2024 average</div></div>
+          <div class="arrow">→</div>
+          <div class="cell after"><div class="k">Time to first booking</div><div class="v">&lt;30 days</div><div class="m">2025 · a 39% improvement</div></div>
+        </div>
+        <div class="before-after">
+          <div class="cell"><div class="k">T&amp;C validation</div><div class="v">64.5 days</div><div class="m">Q1 2024</div></div>
+          <div class="arrow">→</div>
+          <div class="cell after"><div class="k">T&amp;C validation</div><div class="v">15.3 days</div><div class="m">Q4 2024 · a 76% reduction</div></div>
+        </div>
+        <p>Account activation itself became near-instant: a client who is ready can now book within minutes of setup. Customer Success spent far less time hand-holding, and fast implementation went from a claim to a measurable advantage.</p>
+        <div class="note">
+          <p><strong>The honest caveat.</strong> Much of the remaining delay is customers who simply have no trip to book yet. Product can't compress that, and I'd rather say so than claim the last 30 days as friction. Separating “delay we removed” from “delay that isn't ours” is what let us stop optimizing the wrong thing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>What I'd do differently</h2>
+        <p>I would have instrumented the onboarding funnel step by step before starting. We measured the journey largely through CS records and quarterly reviews, which was enough to find the T&amp;C bottleneck but too coarse to see which of the smaller fixes moved the number most. Starting from event-level data would have let me prove — not infer — where the remaining days go.</p>
+      </div>
+    </section>
+
+    <div class="wrap cs-nav">
+      <a href="../index.html#work">← All work</a>
+      <a href="checkout.html">Next: Checkout reliability →</a>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <div>Jeff Rolling · Product Manager</div>
+      <div class="muted">Amsterdam · Open to Senior PM roles in travel, payments, and expense</div>
+    </div>
+    <div>
+      <a href="mailto:jeff.rolling@gmail.com">jeff.rolling@gmail.com</a> ·
+      <a href="https://www.linkedin.com/in/JeffRolling" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

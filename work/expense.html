@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Expense from Zero — Jeff Rolling</title>
+<meta name="description" content="Building GetGoing's first integrated expense product: discovery, build-buy-partner strategy, a mid-build vendor change, AI receipt capture, and the commercial model.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Jeff Rolling<small>Product Manager · Amsterdam</small></a>
+    <nav class="nav" aria-label="Main">
+      <a href="../index.html#work" aria-current="page">Work</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="cs-head">
+    <div class="wrap">
+      <p class="eyebrow">Case study 3 of 3 · 0 → 1 · GetGoing, Nov 2022 – Dec 2025</p>
+      <h1>Building the company's first expense product from zero</h1>
+      <p class="lede">Customers wanted one place for travel and expenses. The company had never built an expense product, and I had to learn the domain, pick a strategy, change course when the first partner couldn't deliver, and design the commercial model — without overbuilding version one.</p>
+      <dl class="glance">
+        <div><dt>Problem</dt><dd>SMB customers ran separate travel and expense tools. GetGoing had no expense capability and no expense expertise.</dd></div>
+        <div><dt>My role</dt><dd>PM from first customer interview to paid launch: discovery, PRD, vendor selection and the mid-build switch, pilot program, pricing package.</dd></div>
+        <div><dt>Result</dt><dd class="big">A second product line</dd></div>
+        <div><dt>Shipped</dt><dd>Expense MVP 2024 · paid Travel &amp; Expense package with per-user pricing, Aug 2025 · four new countries, Dec 2025.</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <div class="cs-body">
+    <section>
+      <div class="wrap">
+        <h2>Build, buy, or partner</h2>
+        <p>The strategic question came first: build our own expense engine, integrate a third-party product, or something hybrid. Expense management was new to the organization, so I started by immersing myself in the domain — industry practice, internal experts across BCD, and interviews with the customers already asking for it.</p>
+        <p>The answer that fit a 33-person company with one PM was <strong>partner</strong>: own the customer experience and the travel-expense integration, and license the expense engine. In November 2022 we began weekly calls with a first partner, Numiga — customer stories, initial roadmap, technical architecture, wireframes.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Changing partners mid-build</h2>
+        <p>Several months in, it became clear the first partner could not deliver key capabilities on the timeline customers required. The tempting move was to push on: work was done, relationships were built, and switching meant an immediate delay.</p>
+        <div class="callout">
+          <p class="eyebrow">The decision</p>
+          <p>Optimize for total time to market, not for avoiding short-term disruption. Switching cost us weeks now; staying would have cost us longer, because the functionality customers needed simply did not exist on the current path.</p>
+        </div>
+        <p>I evaluated the alternatives against the MVP requirements, consulted teams inside the parent company who had worked with the candidates, and recommended <strong>Mobilexpense</strong>. GetGoing became one of the earliest adopters of their Partner API — close enough to the build that we helped shape parts of the API itself, not just our implementation of it.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Scoping the MVP</h2>
+        <p>I wrote the Product Requirements Document: customer problems, user journeys, MVP scope, success criteria. It also became the template I later trained the business analysts on. With UX and Engineering we designed the core workflows and deliberately stopped there.</p>
+        <div class="table-scroll">
+        <table>
+          <thead><tr><th>Workflow</th><th>What v1 shipped</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Expense capture</strong></td><td>Log an expense from a trip or standalone, in the same platform as the booking</td></tr>
+            <tr><td><strong>Receipt scanning</strong></td><td>AI receipt capture with OCR extraction</td></tr>
+            <tr><td><strong>Approvals</strong></td><td>Approval workflow for submitted expenses</td></tr>
+            <tr><td><strong>Policies</strong></td><td>Expense policy rules applied on submission</td></tr>
+            <tr><td><strong>Integration</strong></td><td>Mobilexpense Partner API, so travel and expense data stay in sync</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p>Before launch I <strong>recruited six pilot customers</strong> who agreed to give ongoing feedback through iteration; the group later grew to around ten, managed directly through customer interviews. Their feedback set the order of everything that came after v1.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>From MVP to product line</h2>
+        <ul>
+          <li><strong>2024 — Expense MVP</strong> launched to pilot customers, combining travel and expense in one platform for the first time.</li>
+          <li><strong>Aug 2025 — Travel &amp; Expense as a paid package</strong> with <strong>per-user pricing</strong>. Designing the commercial model was part of the brief, not a hand-off to Sales.</li>
+          <li><strong>Dec 2025 — four new countries</strong> (UK, France, Belgium, Netherlands) with SAP BRIM invoicing, alongside Germany and the US.</li>
+        </ul>
+        <p>Expense management is now GetGoing's second major product line and its subscription revenue model. All of it shipped while I was also running <a href="../index.html#work">a full engineering vendor transition</a>.</p>
+        <div class="note">
+          <p><strong>What I won't claim.</strong> I don't publish attach rate or revenue for the expense line here. What I can say is that it went from a customer request to a priced, multi-country package in three years with a single PM on it — and that the pilot customers who shaped v1 are still shaping the roadmap.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>What I'd do differently</h2>
+        <p>Run the vendor evaluation as a paid proof of concept before committing. The first partner's gaps were integration gaps, and integration gaps only show up when you integrate. A four-week technical spike against our real booking data would have surfaced them before we had months of joint design work to walk away from. The switch was the right call; needing to make it was avoidable.</p>
+      </div>
+    </section>
+
+    <div class="wrap cs-nav">
+      <a href="checkout.html">← Previous: Checkout reliability</a>
+      <a href="../about.html">About Jeff →</a>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <div>Jeff Rolling · Product Manager</div>
+      <div class="muted">Amsterdam · Open to Senior PM roles in travel, payments, and expense</div>
+    </div>
+    <div>
+      <a href="mailto:jeff.rolling@gmail.com">jeff.rolling@gmail.com</a> ·
+      <a href="https://www.linkedin.com/in/JeffRolling" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
